@@ -9,7 +9,7 @@ namespace DesignPatterns.Creational.FactoryMethod
         public abstract IItem Create();
     }
 
-    // abstract implementation
+    // implementation
 
     class ItemA : IItem { }
 

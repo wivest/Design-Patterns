@@ -1,16 +1,16 @@
 namespace DesignPatterns.Creational.AbstractFactory
 {
-    // abstract declaration
+    // interface declaration
 
     interface IItemType1 { }
 
     interface IItemType2 { }
 
-    abstract class AbstractFactory
+    interface IAbstractFactory
     {
-        public abstract IItemType1 CreateType1();
+        public IItemType1 CreateType1();
 
-        public abstract IItemType2 CreateType2();
+        public IItemType2 CreateType2();
     }
 
     // implementation
@@ -19,14 +19,14 @@ namespace DesignPatterns.Creational.AbstractFactory
 
     class SampleItemType2 : IItemType2 { }
 
-    class SampleAbstractFactory : AbstractFactory
+    class SampleAbstractFactory : IAbstractFactory
     {
-        public override IItemType1 CreateType1()
+        public IItemType1 CreateType1()
         {
             return new SampleItemType1();
         }
 
-        public override IItemType2 CreateType2()
+        public IItemType2 CreateType2()
         {
             return new SampleItemType2();
         }

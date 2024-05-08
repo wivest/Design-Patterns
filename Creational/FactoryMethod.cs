@@ -1,12 +1,12 @@
 namespace DesignPatterns.Creational.FactoryMethod
 {
-    // abstract declaration
+    // interface declaration
 
     interface IItem { }
 
-    abstract class Factory
+    interface IFactory
     {
-        public abstract IItem Create();
+        public IItem Create();
     }
 
     // implementation
@@ -15,17 +15,17 @@ namespace DesignPatterns.Creational.FactoryMethod
 
     class ItemB : IItem { }
 
-    class FactoryA : Factory
+    class FactoryA : IFactory
     {
-        public override IItem Create()
+        public IItem Create()
         {
             return new ItemA();
         }
     }
 
-    class FactoryB : Factory
+    class FactoryB : IFactory
     {
-        public override IItem Create()
+        public IItem Create()
         {
             return new ItemB();
         }

@@ -2,14 +2,14 @@ namespace DesignPatterns.Structural.Adapter
 {
     // interface declaration
 
-    interface ILogic
+    interface IUnformatedLogic
     {
         public void Method(int data);
     }
 
     // implementation
 
-    class Adapter : ILogic
+    class Adapter : IUnformatedLogic
     {
         private Service _adaptee = new Service();
 

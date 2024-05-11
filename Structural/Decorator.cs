@@ -37,7 +37,7 @@ namespace DesignPatterns.Structural.Decorator
         public new void Method()
         {
             base.Method();
-            // extra actions
+            // new behaviour
         }
     }
 

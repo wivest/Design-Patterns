@@ -7,9 +7,18 @@ namespace DesignPatterns.Behavioral.Observer
         public void Update(Context context);
     }
 
+    interface IPublisher
+    {
+        public void Subscribe(ISubscriber subscriber) { }
+
+        public void Unsubscribe(ISubscriber subscriber) { }
+
+        public void Notify() { }
+    }
+
     // class declaration
 
-    class Publisher
+    class Publisher : IPublisher
     {
         private List<ISubscriber> _subscribers = new List<ISubscriber>();
         private Context _context = new Context();

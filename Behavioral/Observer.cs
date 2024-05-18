@@ -26,17 +26,12 @@ namespace DesignPatterns.Behavioral.Observer
             _subscribers.Remove(subscriber);
         }
 
-        private void Notify()
+        public void Notify()
         {
             foreach (var s in _subscribers)
             {
                 s.Update(_context);
             }
-        }
-
-        public void Method()
-        {
-            Notify();
         }
     }
 

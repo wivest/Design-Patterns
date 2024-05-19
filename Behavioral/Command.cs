@@ -13,6 +13,11 @@ namespace DesignPatterns.Behavioral.Command
     {
         private Receiver? _receiver;
 
+        public Command(Receiver receiver)
+        {
+            _receiver = receiver;
+        }
+
         public void Execute()
         {
             _receiver?.Method();
@@ -23,7 +28,7 @@ namespace DesignPatterns.Behavioral.Command
 
     class Invoker
     {
-        private ICommand _command = new Command();
+        private ICommand _command = new Command(new Receiver());
 
         public void Invoke()
         {

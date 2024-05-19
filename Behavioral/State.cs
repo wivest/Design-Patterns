@@ -45,6 +45,7 @@ namespace DesignPatterns.Behavioral.State
         public Context(IState state)
         {
             _state = state;
+            _state.Context = this;
         }
 
         public void SetState(IState state)

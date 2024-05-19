@@ -37,6 +37,7 @@ namespace DesignPatterns.Behavioral.Iterator
             Element next;
             // get next element from collection
             next = new Element();
+            _current = next;
             return next;
         }
     }

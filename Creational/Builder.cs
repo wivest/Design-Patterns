@@ -48,9 +48,9 @@ namespace DesignPatterns.Creational.Builder
     }
 
     // access director and builder
-    class Program
+    class Application
     {
-        static void Main()
+        public void Run()
         {
             Director director = new Director();
 

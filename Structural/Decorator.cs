@@ -43,9 +43,9 @@ namespace DesignPatterns.Structural.Decorator
 
     // class declaration
 
-    class Program
+    class Application
     {
-        public static void Main()
+        public void Run()
         {
             IComponent component = new Component();
             component = new DerivedDecorator(component);

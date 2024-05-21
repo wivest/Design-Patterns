@@ -7,7 +7,7 @@ namespace DesignPatterns.Creational.Singleton
 
         private Singleton() { }
 
-        public Singleton GetInstance()
+        public static Singleton GetInstance()
         {
             if (_instance == null)
             {
